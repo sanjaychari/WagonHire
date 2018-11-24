@@ -1,0 +1,165 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<ul class="horizontal">
+  <li><a href="home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a class="active" href="signup.html">Get Involved</a></li>
+  <li><a href="faqs.html">FAQs</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg1"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg2"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg3"></div>
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<center><img src="logo.jpg" width=750 height=100></img></center>
+<h1>SIGNUP AS RENTEE</h1>
+<br class="high">
+<form action="response_rentee.php" method="post">
+<div class="row">
+      <div class="col-25">
+        <label for="name">NAME :</label>
+      </div>
+      <div class="col-75"><input type="text" name="name" id="name" placeholder="Enter name" required></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="locale">LOCALITY OF RESIDENCE :</label>
+      </div>
+      <div class="col-75"><input type="text" list="area" name="area" id="areaa" placeholder="Enter locality" required>
+	<datalist id="area">
+	<option>Malleshwaram</option>
+	<option>Rajajinagar</option>
+	<option>Kammanahalli</option>
+	<option>Jayanagar</option>
+	</datalist></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="vtype">TYPE OF VEHICLE :</label>
+      </div>
+      <div class="col-75-radio"><input type="radio" name="vtype" id="4wheel" required><font style="font-family: Trebuchet MS, Helvetica, sans-serif;font-size: 20;color: white;">4 WHEELER</font><br>
+      <input type="radio" name="vtype" id="2wheel" required><font style="font-family: Trebuchet MS, Helvetica, sans-serif;font-size: 20;color: white;">2 WHEELER</font>
+	</div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="ftype">FUEL CONSUMPTION TYPE :</label>
+      </div>
+      <div class="col-75-radio"><input type="radio" name="ftype" id="petrol" required><font style="font-family: Trebuchet MS, Helvetica, sans-serif;font-size: 20;color: white;">PETROL</font><br>
+      <input type="radio" name="ftype" id="diesel" required><font style="font-family: Trebuchet MS, Helvetica, sans-serif;font-size: 20;color: white;">DIESEL</font>
+	</div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="ftype">VEHICLE NAME (WITH COMPANY AND MODEL) :</label>
+      </div>
+      <div class="col-75"><input type="text" name="vname" id="vname" placeholder="Enter vehicle name" required>
+  </div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="ftype">DISTANCE TRAVELLED BY VEHICLE (IN KMS) :</label>
+      </div>
+      <div class="col-75"><input type="text" name="distance" id="distance" placeholder="Enter distance travelled" required>
+  </div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="time">PREFERRED LENGTH OF TIME PERIOD OF RENT (IN MONTHS) :</label>
+      </div>
+      <div class="col-75"><input type="text" name="time" id="time" placeholder="Enter renting period" required></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="price">PREFERRED MONTHLY PRICE OF RENT :</label>
+      </div>
+      <div class="col-75"><input type="text" name="price" id="pricea" list="price" placeholder="Enter price" required>
+	<datalist id="price">
+	<option>2000</option>
+	<option>4000</option>
+	<option>8000</option>
+	<option>10000</option>
+	</datalist></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="phoneno">PHONE NUMBER :</label>
+      </div>
+      <div class="col-75"><input type="text" name="number" id="phoneno" placeholder="Enter phone number" required></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="email">EMAIL ID :</label>
+      </div>
+      <div class="col-75"><input type="text" name="email" id="email" placeholder="Enter email id" required></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="password">PASSWORD :</label>
+      </div>
+      <div class="col-75"><input type="password" name="password" id="password" placeholder="Enter password" required></div>
+</div>
+<br class="moderate">
+<div class="row">
+      <div class="col-25">
+        <label for="confirmpassword">CONFIRM PASSWORD :</label>
+      </div>
+      <div class="col-75"><input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm password" required></div>
+</div>
+<br class="moderate">
+<center><input type="submit" id="submit" class="submit"></center>
+</form>
+<br class="moderate">
+<center><a href="#" class="normal">Click here to go back to the top of the page</a><center>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

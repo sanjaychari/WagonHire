@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<ul class="horizontal">
+  <li><a href="home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="signup.html">Get Involved</a></li>
+  <li><a href="faqs.html">FAQs</a></li>
+  <li><a class="active" href="contact.html">Contact Us</a></li>
+</ul>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg1_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg2_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg3_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<center><img src="logo.jpg" width=750 height=100></img></center>
+<h1>CUSTOMER SERVICE CENTRE LOCATIONS</h1>
+<table>
+<tr>
+<th>CITY</th>
+<th>NUMBER OF SERVICE CENTRES</th>
+<th>ADDRESS OF SERVICE CENTRE</th>
+<th>CONTACT NUMBER</th>
+</tr>
+<tr>
+<td rowspan="4">MUMBAI</td>
+<td rowspan="4">4</td>
+<td>#32, 12th Cross, 10th Main, Marine Drive</td>
+<td>+91 7891279812</td>
+</tr>
+<tr>
+<td>#450, 21st Cross, 7th Main, Colaba</td>
+<td>+91 9019279282</td>
+</tr>
+<tr>
+<td>#110, 7th Cross, 14th Main, Bandra</td>
+<td>+91 9876122341</td>
+</tr>
+<tr>
+<td>#50, 2nd Cross, 10th Main, Powai</td>
+<td>+91 9876543210</td>
+</tr>
+<tr>
+<td rowspan="4">DELHI</td>
+<td rowspan="4">4</td>
+<td>#44, 11th Cross, 10th Main, Anand Vihar</td>
+<td>+91 7654327821</td>
+</tr>
+<tr>
+<td>#102, 12th Cross, 7th Main, Alipur</td>
+<td>+91 8894562351</td>
+</tr>
+<tr>
+<td>#110, 2nd Cross, 14th Main, Arjun Nagar</td>
+<td>+91 9436712345</td>
+</tr>
+<tr>
+<td>#50, 22nd Cross, 15th Main, Hauz Khas</td>
+<td>+91 9988776655</td>
+</tr>
+<tr>
+<td rowspan="3">BANGALORE</td>
+<td rowspan="3">3</td>
+<td>#55, 7th Cross, 8th Main, Marathahalli</td>
+<td>+91 9875643210</td>
+</tr>
+<tr>
+<td>#47, 9th Cross, 8th Main, Malleshwaram</td>
+<td>+91 9880723451</td>
+</tr>
+<tr>
+<td>#95, 6th Cross, 9th Main, Indiranagar</td>
+<td>+91 9761234502</td>
+</tr>
+<tr>
+<td rowspan="3">CHENNAI</td>
+<td rowspan="3">3</td>
+<td>#45, 9th Cross, 10th Main, Guindy</td>
+<td>+91 9786755432</td>
+</tr>
+<tr>
+<td>#85, 11th Cross, 12th Main, T. Nagar</td>
+<td>+91 8877665544</td>
+</tr>
+<tr>
+<td>#26, 10th Cross, 12th Main, Anna Salai</td>
+<td>+91 7968574635</td>
+</tr>
+<tr>
+<td rowspan="2">KOLKATA</td>
+<td rowspan="2">2</td>
+<td>#65, 7th Cross, 8th Main, Ballygunge</td>
+<td>+91 7766554433</td>
+</tr>
+<tr>
+<td>#47, 10th Cross, 5th Main, Salt Lake</td>
+<td>+91 9908672341</td>
+</tr>
+</table>
+<br class="moderate">
+<center><a href="#" class="normal">Click here to go back to the top of the page</a><center>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<ul class="horizontal">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="signup.html">Get Involved</a></li>
+  <li><a href="faqs.html">FAQs</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg1_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg2_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bg3_about"></div>
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<center><img src="logo.jpg" width=750 height=100></img></center>
+<h1>OBJECTIVE</h1>
+<p>The objective of the website is to assist both people who want to give their vehicles</p><br>
+<p>for rent (renters) and those who want to rent vehicles (rentees). We efficiently match</p><br>
+<p>renters with their prospective rentees and vice versa using our unique algorithm.</p>
+<br class="moderate">
+<h1>CUSTOMER TESTIMONIALS</h1>
+<!-- Slideshow container -->
+<div class="slideshow-container-quote">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides-quote">
+    <q>I travel a lot so I'm frequently out of town. Most of the time, my scooter would just sit at home collecting dust, and when i came back home, it would be in horrible condition.<br class="low"> WagonHire helped me by allowing me to give my scooter out for rent and make money in the process</q>
+    <p class="author">- Shiva (a resident of Bangalore)</p>
+  </div>
+
+  <div class="mySlides-quote">
+    <q>I am a student who lives on a low budget. WagonHire is the best fit for me, as buying a vehicle would be too expensive.<br class="low"> I love that you can barter over the price on the website</q>
+    <p class="author">- Aditya (a resident of Mumbai)</p>
+  </div>
+
+  <div class="mySlides-quote">
+    <q>I have been transferred to this city on work for 3 months. I constantly found that vehicular transport was a necessity.<br class="low">WagonHire helped me by giving me a platform to find a vehicle for short term.</q>
+    <p class="author">- Ravi (a resident of Delhi)</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev-quote" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next-quote" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container-quote">
+  <span class="dot-quote" onclick="currentSlide(1)"></span> 
+  <span class="dot-quote" onclick="currentSlide(2)"></span> 
+  <span class="dot-quote" onclick="currentSlide(3)"></span> 
+</div>
+
+<h1>OUR PARTNERS</h1>
+<br class="moderate">
+<center><a href="https://www.amazon.in" target="_blank"><img src="amazon.jpg" style="width:200;height:200;"></a></center><br>
+<center><a href="https://www.ford.com" target="_blank"><img src="ford.png" style="width:200;height:200;"></a></center><br>
+<center><a href="https://www.travelyaari.com" target="_blank"><img src="travelyaari.jpg" style="width:200;height:200;"></a></center><br>
+<center><a href="https://www.redbus.in" target="_blank"><img src="redbus.jpg" style="width:200;height:200;"></a></center><br>
+
+<br class="moderate">
+<center><a href="#" class="normal">Click here to go back to the top of the page</a><center>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+<script>
+var slideIndex_quote = 1;
+showSlides_quote(slideIndex_quote);
+
+function plusSlides(n) {
+  showSlides_quote(slideIndex_quote += n);
+}
+
+function currentSlide(n) {
+  showSlides_quote(slideIndex_quote = n);
+}
+
+function showSlides_quote(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-quote");
+  var dots = document.getElementsByClassName("dot-quote");
+  if (n > slides.length) {slideIndex_quote = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active-quote", "");
+    }
+  slides[slideIndex_quote-1].style.display = "block"; 
+  dots[slideIndex_quote-1].className += " active-quote";
+}
+</script>
+</body>
+</html>
